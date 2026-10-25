@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Belli Sravani | Portfolio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#0b1120;color:#f3f4f6;line-height:1.6}
+header{position:sticky;top:0;background:#111827;padding:16px 8%;display:flex;justify-content:space-between;align-items:center;gap:16px}
+header h2{color:#60a5fa;font-size:20px}nav{display:flex;flex-wrap:wrap;gap:18px}
+nav a{color:#e5e7eb;text-decoration:none;font-size:14px}nav a:hover{color:#60a5fa}
+section{padding:64px 8%}.hero{min-height:68vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.hero p:first-child{color:#60a5fa}h1{font-size:clamp(34px,6vw,52px);margin:10px 0}h2{margin-bottom:14px}
+.accent{color:#60a5fa}.muted{color:#cbd5e1;max-width:650px}
+.btn{display:inline-block;margin-top:22px;padding:10px 17px;border-radius:7px;background:#2563eb;color:white;text-decoration:none}
+.btn:hover{background:#1d4ed8}.panel{background:#111827;border:1px solid #263449;border-radius:12px;padding:20px;max-width:760px}
+.skills{display:flex;flex-wrap:wrap;gap:10px}.skills span{padding:8px 12px;border-radius:7px;background:#1e293b;border:1px solid #334155}
+footer{text-align:center;color:#94a3b8;padding:22px;border-top:1px solid #263449}
+@media(max-width:600px){header{align-items:flex-start;flex-direction:column;padding:14px 6%}nav{gap:12px}section{padding:48px 6%}}
+</style>
+</head>
+<body>
+<header><h2>Belli Sravani</h2><nav>
+<a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+</nav></header>
+<section class="hero" id="home">
+<p>Hello, I'm</p><h1>Belli Sravani</h1><h2 class="accent">B.Tech CSE Student</h2>
+<p class="muted">I am interested in web development and programming. I enjoy learning new technologies and building useful projects.</p>
+<a class="btn" href="#projects">View My Project</a>
+</section>
+<section id="about"><h2>About Me</h2><div class="panel">
+<p class="muted">I am a Computer Science student at Vignana Bharathi Institute of Technology. I am learning web development and improving my programming skills through practical projects.</p>
+</div></section>
+<section id="skills"><h2>My Skills</h2><div class="skills">
+<span>HTML</span><span>CSS</span><span>Java</span><span>Servlets</span><span>JDBC</span><span>MariaDB</span>
+</div></section>
+<section id="projects"><h2>My Project</h2><div class="panel">
+<h3>College Queue Management System</h3><p class="muted">A web application that helps students view queues for college services.</p>
+<a class="btn" id="demoLink" href="#" target="_blank" rel="noopener">Live Demo</a>
+</div></section>
+<section id="contact"><h2>Contact</h2><div class="panel">
+<p class="muted">Email: <span id="emailText">bellisravani15@gmail.com</span></p>
+<p class="muted">GitHub: <a class="accent" href="https://github.com/sravanibelli" target="_blank" rel="noopener">visit my GitHub profile</a></p>
+</div></section>
+<footer>© 2026 Belli Sravani</footer>
+<script>
+const PROJECT_URL = "https://college-queue-management.onrender.com";
+const CONTACT_EMAIL = "bellisravani15@gmail.com";
+const demoLink = document.getElementById("demoLink");
+if (PROJECT_URL && !PROJECT_URL.startsWith("ADD_")) demoLink.href = PROJECT_URL;
+else demoLink.addEventListener("click", function(e){e.preventDefault();alert("Add your Render project URL in PROJECT_URL at the bottom of index.html.");});
+if (CONTACT_EMAIL && !CONTACT_EMAIL.startsWith("ADD_")) document.getElementById("emailText").textContent = CONTACT_EMAIL;
+</script>
+</body></html>
